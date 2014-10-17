@@ -23,10 +23,11 @@
 		// 	startGame();	
 		// }
 		// 默认参数
+
 		$.fn.Rhythm.defaults = {
 			speed :100,    	//下落速度
 			startT :1000,  	//每个目标出现的时间
-			Countdown :10  	// 倒计时
+			Countdown :10  	//设置游戏时长
 		};
 		var opts = $.extend({}, $.fn.Rhythm.defaults, options);
 		return this.each(function() {
@@ -35,15 +36,14 @@
 				sizey = 4, 						// 背景由小变大
 				scroe = 0, 						// 分数
 				number, 						// 目标数
+				sound, 							// 音乐控制
 				num = 0,						// 个数
 				sy = 10;   						// Y轴速度
-			var init = function() {
-				var _scroeH = '<div id="score" class="score">分数：<span>' + scroe + '</span></div>',
-					_countdowmH = ' <div class="countdown">' + opts.Countdown + '</div>';
-				Element.append(_scroeH).append(_countdowmH);
-			}
-			init();
+			var _scroeH = '<div id="score" class="score">分数：<span>' + scroe + '</span></div>',
+				_countdowmH = ' <div class="countdown">' + opts.Countdown + '</div>';
+			Element.append(_scroeH).append(_countdowmH);
 			var Wrapper = {
+				//随机选择轨道
 				randoms: function() {
 					num++;
 					number = (1 + Math.random() * (4 - 1)).toFixed(0);
@@ -52,6 +52,7 @@
 					track.append(_html);
 					return num;
 				},
+				//目标下落
 				move: function() {
 					var idNum = Wrapper.randoms();
 					var y = 0; //y轴
@@ -76,6 +77,7 @@
 					}, opts.speed)
 
 				},
+				//事件控制
 				events: function() {
 					var touchStatus = false,
 						u = navigator.userAgent;
@@ -107,6 +109,7 @@
 					}
 					Wrapper.music();
 				},
+				//游戏开始
 				start: function() {
 					var lastNum = Wrapper.move();
 					if (opts.Countdown == 1) {
@@ -122,12 +125,15 @@
 						$('.msg').on('click', 'a.close', function(event) {
 							$(this).parent().html('').hide();
 							$('.mask').hide();
+							window.location=window.location;
 						});
 
 						Wrapper.start = null;
+						sound.pause();
 					}
 					setTimeout(Wrapper.start, opts.startT)
 				},
+				//游戏时间倒计时
 				cuntdown: function() {
 					Wrapper.start();
 					Wrapper.events();
@@ -143,13 +149,31 @@
 					};
 					_CountdownT();
 				},
+				//音乐
 				music: function() {
-					var sound = new Howl({
+					sound = new Howl({
 						urls: ['./绿光.mp3']
 					}).play();
+				},
+				//开场倒数秒数
+				init:function(){
+					var gameNum=5;
+					var startGame=function(){
+						$('.startGame').css(
+							'background-image','url(./images/down'+gameNum+'.png)'
+						);
+						gameNum--;
+						if(gameNum == -1){
+							$('.startGame').hide();
+							Wrapper.cuntdown();
+							startGame=null;
+						}
+						setTimeout(startGame, 1000)
+					}
+					startGame();	
 				}
 			}
-			Wrapper.cuntdown();
+			Wrapper.init();
 		})
 	}
 })(Zepto)
