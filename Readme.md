@@ -25,16 +25,17 @@ DOM结构
 JS调用
 -
 	$('#game').Rhythm({
-		speed :100, 	//下落速度
-		startT :1000, 	//每个目标出现的时间
-		Countdown :60	//设置游戏时长
+		musicUrl:"xxx.mp3",	//音乐地址
+		speed :100, 	    //下落速度
+		startT :1000, 	    //每个目标出现的时间
+		Countdown :60	    //设置游戏时长
 	});
 参数配置
 -
-
-    speed :100, 	//下落速度
-	startT :1000, 	//每个目标出现的时间
-	Countdown :60	//设置游戏时长
+	musicUrl:"xxx.mp3",	//音乐地址
+    speed :100, 	    //下落速度
+	startT :1000, 	    //每个目标出现的时间
+	Countdown :60   	//设置游戏时长
 
 
 该插件仅供学习，不断完善中。如有问题请联系 `262281610@qq.com`
