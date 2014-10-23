@@ -32,14 +32,14 @@
 		};
 		var opts = $.extend({}, $.fn.Rhythm.defaults, options);
 		return this.each(function() {
-			var Element=$(this),				// 调用本身
-				targetBtn = $('#target-btn'),   // 按钮父类
-				sizey = 4, 						// 背景由小变大
-				scroe = 0, 						// 分数
-				number, 						// 目标数
-				sound, 							// 音乐控制
-				num = 0,						// 个数
-				sy = 10;   						// Y轴速度
+			var Element = $(this), // 调用本身
+				targetBtn = $('#target-btn'), // 按钮父类
+				sizey = 4, // 背景由小变大
+				scroe = 0, // 分数
+				number, // 目标数
+				sound, // 音乐控制
+				num = 0, // 个数
+				sy = 10; // Y轴速度
 			var _scroeH = '<div id="score" class="score">分数：<span>' + scroe + '</span></div>',
 				_countdowmH = ' <div class="countdown">' + opts.Countdown + '</div>';
 			Element.append(_scroeH).append(_countdowmH);
@@ -126,7 +126,7 @@
 						$('.msg').on('click', 'a.close', function(event) {
 							$(this).parent().html('').hide();
 							$('.mask').hide();
-							window.location=window.location;
+							window.location = window.location;
 						});
 
 						Wrapper.start = null;
@@ -157,21 +157,21 @@
 					}).play();
 				},
 				//开场倒数秒数
-				init:function(){
-					var gameNum=5;
-					var startGame=function(){
+				init: function() {
+					var gameNum = 5;
+					var startGame = function() {
 						$('.startGame').css(
-							'background-image','url(./images/down'+gameNum+'.png)'
+							'background-image', 'url(./images/down' + gameNum + '.png)'
 						);
 						gameNum--;
-						if(gameNum == -1){
+						if (gameNum == -1) {
 							$('.startGame').hide();
 							Wrapper.cuntdown();
-							startGame=null;
+							startGame = null;
 						}
 						setTimeout(startGame, 1000)
 					}
-					startGame();	
+					startGame();
 				}
 			}
 			Wrapper.init();
