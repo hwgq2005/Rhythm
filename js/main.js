@@ -25,6 +25,7 @@
 		// 默认参数
 
 		$.fn.Rhythm.defaults = {
+			musicUrl:'./Coldplay.mp3',	//音乐地址
 			speed :100,    	//下落速度
 			startT :1000,  	//每个目标出现的时间
 			Countdown :10  	//设置游戏时长
@@ -152,7 +153,7 @@
 				//音乐
 				music: function() {
 					sound = new Howl({
-						urls: ['./绿光.mp3']
+						urls: [opts.musicUrl]
 					}).play();
 				},
 				//开场倒数秒数
