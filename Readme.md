@@ -1,9 +1,9 @@
-ÎÄµµËµÃ÷
+æ–‡æ¡£è¯´æ˜Ž
 ====================
-²å¼þËµÃ÷£º
+æ’ä»¶è¯´æ˜Žï¼š
 -
-´Ë²å¼þÖ§³Ö`ÒÆ¶¯¶Ë` ¡¢`PC¶Ë`£¬ÒýÈë `<Zepto.js> `»ò`<jQuery.js> `¼´¿É¡£
-DOM½á¹¹
+æ­¤æ’ä»¶æ”¯æŒ`ç§»åŠ¨ç«¯` ã€`PCç«¯`ï¼Œå¼•å…¥ `<Zepto.js> `æˆ–`<jQuery.js> `å³å¯ã€‚
+DOMç»“æž„
 -
 	<div class="game" id="game">
 		<img src="images/main.jpg"  />
@@ -22,20 +22,20 @@ DOM½á¹¹
 		<div class="msg"></div>
 	</div>
 
-JSµ÷ÓÃ
+JSè°ƒç”¨
 -
 	$('#game').Rhythm({
-		musicUrl:"xxx.mp3",	//ÒôÀÖµØÖ·
-		speed :100, 	    //ÏÂÂäËÙ¶È
-		startT :1000, 	    //Ã¿¸öÄ¿±ê³öÏÖµÄÊ±¼ä
-		Countdown :60	    //ÉèÖÃÓÎÏ·Ê±³¤
+		musicUrl:"xxx.mp3",	//éŸ³ä¹åœ°å€
+		speed :100, 	    //ä¸‹è½é€Ÿåº¦
+		startT :1000, 	    //æ¯ä¸ªç›®æ ‡å‡ºçŽ°çš„æ—¶é—´
+		Countdown :60	    //è®¾ç½®æ¸¸æˆæ—¶é•¿
 	});
-²ÎÊýÅäÖÃ
+å‚æ•°é…ç½®
 -
-	musicUrl:"xxx.mp3",	//ÒôÀÖµØÖ·
-    speed :100, 	    //ÏÂÂäËÙ¶È
-	startT :1000, 	    //Ã¿¸öÄ¿±ê³öÏÖµÄÊ±¼ä
-	Countdown :60   	//ÉèÖÃÓÎÏ·Ê±³¤
+	musicUrl:"xxx.mp3",	//éŸ³ä¹åœ°å€
+    speed :100, 	    //ä¸‹è½é€Ÿåº¦
+	startT :1000, 	    //æ¯ä¸ªç›®æ ‡å‡ºçŽ°çš„æ—¶é—´
+	Countdown :60   	//è®¾ç½®æ¸¸æˆæ—¶é•¿
 
 
-¸Ã²å¼þ½ö¹©Ñ§Ï°£¬²»¶ÏÍêÉÆÖÐ¡£ÈçÓÐÎÊÌâÇëÁªÏµ `262281610@qq.com`
+è¯¥æ’ä»¶ä»…ä¾›å­¦ä¹ ï¼Œä¸æ–­å®Œå–„ä¸­ã€‚
