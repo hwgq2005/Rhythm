@@ -6,19 +6,21 @@
 !(function($){
 
 	var Rhythm = function(element,options){
+		
 		this.options = options;
 		this.element = $(element);
 		this.targetBtn = $('#target-btn');
-		this.sizey = 4; // 背景由小变大
-		this.scroe = 0; // 分数
-		this.number = null; // 目标数
-		this.sound = null; // 音乐控制
-		this.num = 0; // 个数
-		this.sy = 10; // Y轴速度
+		this.sizey = 4; 					// 背景由小变大
+		this.scroe = 0; 					// 分数
+		this.number = null; 				// 目标数
+		this.sound = null; 					// 音乐控制
+		this.num = 0; 						// 个数
+		this.sy = 10; 						// Y轴速度
 
 		this.init(this.element);
 	}
 
+	// 初始化
 	Rhythm.prototype.init=function(element){
 		var _self = this;
 		var gameNum = 5;
@@ -103,7 +105,7 @@
 
 	}
 
-
+	// 绑定事件
 	Rhythm.prototype.events=function() {
 		var _self = this;
 		var touchStatus = false,
@@ -145,6 +147,7 @@
 		}).play();
 	}
 
+	//倒计时开始
 	Rhythm.prototype.cuntdown=function(){
 		var _self = this;
 		_self.start();
