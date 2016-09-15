@@ -134,7 +134,7 @@
 		} else {
 			_self.targetBtn.on('click', '.btn', Eventfun);
 		}
-		// _self.music();
+		_self.music();
 	}
 
 	//音乐
