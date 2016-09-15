@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<meta charset="utf-8">
-	<title>节奏大师小游戏</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
-	<meta http-equiv="Cache-Control" content="max-age=0">
-	<meta name="apple-touch-fullscreen" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="Description" content="">
-	<meta name="Keywords" content="">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="js/zepto.min.js"></script>
-	<script src="js/Pops.js"></script>
-	<script>
-  	  document.onreadystatechange = subSomething;
-  	  function subSomething() {
-            if (document.readyState == "complete") { //当页面加载状态为完全结束时进入 
-                	closeDiv();
-            }
-       }
-       $(function(){	
-		 	 show('images/loading.gif', '100', '100', '#fff');
-       })
-	</script>
+		<meta charset="utf-8">
+		<title>节奏大师小游戏</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="Cache-Control" content="max-age=0">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="Description" content="">
+		<meta name="Keywords" content="">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 <body >
 	<div class="game" id="game">
@@ -42,7 +29,8 @@
 		<div class="msg"></div>
 	</div>
 	<div class="mask"></div>
-	<script src="js/main.js"></script>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/Rhythm.js"></script>
 	<script src="js/howler.min.js"></script>
 	<script>
 		$('#game').Rhythm({
